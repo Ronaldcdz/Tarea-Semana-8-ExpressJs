@@ -1,0 +1,48 @@
+
+table .metales{
+    background-color: #d8d6d7;
+}
+
+table .metaloides{
+    background-color: #d5da61;
+}
+
+table .no-metales{
+    background-color: #d7d5d6;
+}
+
+table .alcalinos{
+    background-color: #bfa0c7;
+}
+
+table .alcalinoterreos{
+    background-color: #d9a0c5;
+}
+
+table .metales-transicion{
+    background-color: #e9b853;
+}
+
+table .lantanidos{
+    background-color: #dd9d5f;
+}
+
+table .actinidos{
+    background-color: #d99385;
+}
+
+table .otros-metales{
+    background-color: #f6db3b;
+}
+
+table .otros-no-metales{
+    background-color: #8eb889;
+}
+
+table .halogenos{
+    background-color: #a1c9c9;
+}
+
+table .gases-nobles{
+    background-color: #9fc2e7;
+}
