@@ -7,15 +7,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/vendors/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/custom/table.css">
+
     <title>Home</title>
 </head>
 
 <body>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="main-container">
         <h1 class="text-center">Welcome to the Home Page</h1>
 
 
+        <div class="mx-5 my-5">
+
+            {{#if (verifyArrayLength tablePeriodic)}}
+
+                {{#each tablePeriodic as |elementos|}}
+
+                {{#if (compare elementos.symbol)}}
+                <div class="columnas {{elementos.group}}"><span>{{elementos.symbol}}</span></div>
+
+
+
+                {{#if (espaciosGeneratorH elementos.symbol)}}
+
+                {{#each ../array16}}
+                <div class="espacio-vacio"><span>&nbsp;</span></div>
+
+                {{/each}}
+                {{/if}}
+
+                {{#if (espaciosGeneratorBeandMg elementos.symbol)}}
+
+                {{#each ../array10}}
+                <div class="espacio-vacio"><span>&nbsp;</span></div>
+
+                {{/each}}
+                {{/if}}
+
+
+                {{#if (espaciosGeneratorOg elementos.symbol)}}
+                <div class="mt-5"></div>
+
+                {{#each ../array3}}
+                <div class="espacio-vacio"><span>&nbsp;</span></div>
+                {{/each}}
+                {{/if}}
+
+
+                {{#if (espaciosGeneratorLu elementos.symbol)}}
+                {{#each ../array3}}
+                <div class="espacio-vacio"><span>&nbsp;</span></div>
+                {{/each}}
+                {{/if}}
+
+                {{/if}}
+                {{/each}}
+
+
+            {{else}}
+
+
+            {{/if}}
+            
+
+
+
+        </div>
 
 
         <div class="mx-5 my-5">
@@ -33,7 +90,8 @@
 
                         <td rowspan="3" class="text-center py-4 alcalinos">Alcalinos</td>
                         <td rowspan="3" class="text-center py-4 alcalinoterreos">Alcalinot&eacute;rreos</td>
-                        <td rowspan="3" class="text-center py-4 metales-transicion">Metales de Transici&oacute;n / Bloque D</td>
+                        <td rowspan="3" class="text-center py-4 metales-transicion">Metales de Transici&oacute;n /
+                            Bloque D</td>
                         <td class="lantanidos">Lant&aacute;nidos</td>
                         <td rowspan="3" class="text-center py-4 otros-metales">Otros Metales</td>
 

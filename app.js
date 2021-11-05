@@ -7,7 +7,23 @@ const expressHbs = require("express-handlebars");
 
 const homeRouter = require("./routes/home");
 
-app.engine("hbs", expressHbs());
+
+const table = require("./helpers/hbs/home/table");
+
+app.engine("hbs", expressHbs({
+    helpers: {
+        compare: table.Compare,
+        espaciosGeneratorH: table.EspaciosGeneratorH,
+        espaciosGeneratorBeandMg: table.EspaciosGeneratorBeandMg,
+        espaciosGeneratorOg: table.EspaciosGeneratorOg,
+        espaciosGeneratorLu: table.EspaciosGeneratorLu,
+        verifyArrayLength: table.VerifyArrayLength
+    }
+})
+);
+
+
+
 app.set("view engine", "hbs");
 app.set("views", "views");
 
@@ -17,7 +33,7 @@ app.use(homeRouter);
 
 app.use("/", (req, res, next) => {
 
-    res.status(404).render("404", {layout: false});
+    res.status(404).render("404", { layout: false });
 
 });
 

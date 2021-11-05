@@ -46,3 +46,91 @@ table .halogenos{
 table .gases-nobles{
     background-color: #9fc2e7;
 }
+
+
+
+
+
+.columnas{
+
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    border-style: solid;
+    text-align: center;
+    line-height: 40px;
+    margin: -3px;
+
+}
+
+.espacio-vacio{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    border-style: none;
+    text-align: center;
+    line-height: 40px;
+    margin: -3px;
+}
+
+
+.elemento-nulo{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    border-style: none;
+    text-align: center;
+    line-height: 40px;
+    margin: -3px;
+    background-color: 7c7c7c;
+}
+
+
+
+.metales{
+    background-color: #d8d6d7;
+}
+
+.metaloides{
+    background-color: #d5da61;
+}
+
+.no-metales{
+    background-color: #d7d5d6;
+}
+
+.alcalinos{
+    background-color: #bfa0c7;
+}
+
+.alcalinoterreos{
+    background-color: #d9a0c5;
+}
+
+.metales-transicion{
+    background-color: #e9b853;
+}
+
+.lantanidos{
+    background-color: #dd9d5f;
+}
+
+.actinidos{
+    background-color: #d99385;
+}
+
+.otros-metales{
+    background-color: #f6db3b;
+}
+
+.otros-no-metales{
+    background-color: #8eb889;
+}
+
+.halogenos{
+    background-color: #a1c9c9;
+}
+
+.gases-nobles{
+    background-color: #9fc2e7;
+}
