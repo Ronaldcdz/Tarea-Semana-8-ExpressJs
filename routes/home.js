@@ -9,7 +9,10 @@ const array3 = [0, 0, 0];
 
 tablePeriodicNull = [];
 
-
+// A la hora de quitar elementos de la tabla periodica se agregan con un color gris
+// solo que hay que recargar la pagina de nuevo hasta que aparaezca.
+//No pude resolver este pequeño detalle, pero sí me maté buscando como poder hacer que aparecieran los elementos con color gris, al final sí pude hacerlo, y fue
+//una gran experiencia eso de darlo todo, aún pensando que no se puede, pero con perserverancia lo logré("casi").
 
 let tablePeriodic = [{ symbol: "H", group: "otros-no-metales", num: 1 }, { symbol: "He", group: "gases-nobles", num: 2 },
 { symbol: "Li", group: "alcalinos", num: 3 }, { symbol: "Be", group: "alcalinoterreos", num: 4 }, { symbol: "B", group: "metaloides", num: 5 }, { symbol: "C", group: "otros-no-metales", num: 6 },
