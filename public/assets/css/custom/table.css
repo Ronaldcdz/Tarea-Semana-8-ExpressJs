@@ -78,11 +78,11 @@ table .gases-nobles{
     display: inline-block;
     width: 100px;
     height: 50px;
-    border-style: none;
+    border-style: solid;
     text-align: center;
     line-height: 40px;
     margin: -3px;
-    background-color: 7c7c7c;
+    background-color: #7c7c7c;
 }
 
 

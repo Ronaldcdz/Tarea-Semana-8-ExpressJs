@@ -19,56 +19,117 @@
 
         <div class="mx-5 my-5">
 
+
             {{#if (verifyArrayLength tablePeriodic)}}
 
-                {{#each tablePeriodic as |elementos|}}
+            {{#each tablePeriodic as |elementos|}}
 
-                {{#if (compare elementos.symbol)}}
-                <div class="columnas {{elementos.group}}"><span>{{elementos.symbol}}</span></div>
-
-
-
-                {{#if (espaciosGeneratorH elementos.symbol)}}
-
-                {{#each ../array16}}
-                <div class="espacio-vacio"><span>&nbsp;</span></div>
-
-                {{/each}}
-                {{/if}}
-
-                {{#if (espaciosGeneratorBeandMg elementos.symbol)}}
-
-                {{#each ../array10}}
-                <div class="espacio-vacio"><span>&nbsp;</span></div>
-
-                {{/each}}
-                {{/if}}
+            {{#if (compare elementos.symbol elementos.group)}}
+            <div class="columnas {{elementos.group}}"><span>{{elementos.symbol}}</span></div>
 
 
-                {{#if (espaciosGeneratorOg elementos.symbol)}}
-                <div class="mt-5"></div>
 
-                {{#each ../array3}}
-                <div class="espacio-vacio"><span>&nbsp;</span></div>
-                {{/each}}
-                {{/if}}
+            {{#if (espaciosGeneratorH elementos.symbol)}}
+
+            {{#each ../array16}}
+            <div class="espacio-vacio"><span>&nbsp;</span></div>
+
+            {{/each}}
+            {{/if}}
+
+            {{#if (espaciosGeneratorBeandMg elementos.symbol)}}
+
+            {{#each ../array10}}
+            <div class="espacio-vacio"><span>&nbsp;</span></div>
+
+            {{/each}}
+            {{/if}}
 
 
-                {{#if (espaciosGeneratorLu elementos.symbol)}}
-                {{#each ../array3}}
-                <div class="espacio-vacio"><span>&nbsp;</span></div>
-                {{/each}}
-                {{/if}}
+            {{#if (espaciosGeneratorOg elementos.symbol)}}
+            <div class="mt-5"></div>
 
-                {{/if}}
-                {{/each}}
+            {{#each ../array3}}
+            <div class="espacio-vacio"><span>&nbsp;</span></div>
+            {{/each}}
+            {{/if}}
 
 
+            {{#if (espaciosGeneratorLu elementos.symbol)}}
+            {{#each ../array3}}
+            <div class="espacio-vacio"><span>&nbsp;</span></div>
+            {{/each}}
+            {{/if}}
+
+            {{/if}}
+            {{/each}}
+
+            {{reset}}
             {{else}}
+            {{reset}}
+
+
+            {{#each tablePeriodic as |elementos|}}
+            {{agregarElementosFaltantes elementos.symbol}}
+            {{/each}}
+
+            {{buscarElementosFaltantes tablePeriodic}}
+
+
+
+
+
+            {{#each tablePeriodicNull as |elementos|}}
+
+            <div class="columnas {{elementos.group}}"><span>{{elementos.symbol}}</span></div>
+
+
+
+            {{#if (espaciosGeneratorH elementos.symbol)}}
+
+            {{#each ../array16}}
+            <div class="espacio-vacio"><span>&nbsp;</span></div>
+
+            {{/each}}
+            {{/if}}
+
+            {{#if (espaciosGeneratorBeandMg elementos.symbol)}}
+
+            {{#each ../array10}}
+            <div class="espacio-vacio"><span>&nbsp;</span></div>
+
+            {{/each}}
+            {{/if}}
+
+
+            {{#if (espaciosGeneratorOg elementos.symbol)}}
+            <div class="mt-5"></div>
+
+            {{#each ../array3}}
+            <div class="espacio-vacio"><span>&nbsp;</span></div>
+            {{/each}}
+            {{/if}}
+
+
+            {{#if (espaciosGeneratorLu elementos.symbol)}}
+            {{#each ../array3}}
+            <div class="espacio-vacio"><span>&nbsp;</span></div>
+            {{/each}}
+            {{/if}}
+
+            {{/each}}
+
+            
+
+
+
+
+
+
 
 
             {{/if}}
-            
+
 
 
 

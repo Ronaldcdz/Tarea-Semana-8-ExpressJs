@@ -17,7 +17,10 @@ app.engine("hbs", expressHbs({
         espaciosGeneratorBeandMg: table.EspaciosGeneratorBeandMg,
         espaciosGeneratorOg: table.EspaciosGeneratorOg,
         espaciosGeneratorLu: table.EspaciosGeneratorLu,
-        verifyArrayLength: table.VerifyArrayLength
+        verifyArrayLength: table.VerifyArrayLength,
+        agregarElementosFaltantes: table.AgregarElementosFaltantes,
+        buscarElementosFaltantes: table.BuscarElementosFaltantes,
+        reset: table.Reset
     }
 })
 );
